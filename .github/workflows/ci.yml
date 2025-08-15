@@ -19,3 +19,7 @@ jobs:
         with:
           push: false
           tags: my-app:latest
+- name: Run tests
+  run: |
+    pip install pytest
+    PYTHONPATH=. pytest -q
