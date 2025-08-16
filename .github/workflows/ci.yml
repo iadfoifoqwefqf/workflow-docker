@@ -22,10 +22,12 @@ jobs:
           pip install pytest
 
       - name: Run tests locally before Docker build
-        run: PYTHONPATH=. pytest -q
+        run: |
+          PYTHONPATH=. pytest -q
 
       - name: Build Docker image
-        run: docker build -t workflow-docker .
+        run: |
+          docker build -t workflow-docker .
 
       - name: Run tests inside Docker
         run: |
