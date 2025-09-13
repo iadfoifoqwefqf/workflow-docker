@@ -1,0 +1,25 @@
+name: Create File Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  create-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create a file
+        run: echo "Hello from GitHub Actions 🚀" > hello.txt
+
+      - name: Show file contents
+        run: cat hello.txt
+
+      - name: Upload file as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: hello-file
+          path: hello.txt
