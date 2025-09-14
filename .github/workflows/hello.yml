@@ -1,9 +1,9 @@
-name: Auto Create File
+name: Create File Workflow
 
 on:
-  push:              # Runs every time you push
-    branches:
-      - main         # You can change this branch if needed
+  workflow_dispatch:   # 👈 required for API dispatch
+  push:
+    branches: [ main ] # optional, keep if you also want auto-run on push
 
 jobs:
   create-file:
