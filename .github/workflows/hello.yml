@@ -2,7 +2,8 @@ name: Create File Workflow
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]      # runs on every push to main
+  workflow_dispatch:        # allows manual/API trigger
 
 jobs:
   create-file:
