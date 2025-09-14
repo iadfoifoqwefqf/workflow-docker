@@ -1,9 +1,9 @@
-name: Create File Workflow
+name: Auto Create File
 
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:   # 👈 add this so API/UI can trigger it
+  push:              # Runs every time you push
+    branches:
+      - main         # You can change this branch if needed
 
 jobs:
   create-file:
