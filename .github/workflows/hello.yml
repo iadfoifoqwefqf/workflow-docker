@@ -3,7 +3,7 @@ name: Auto Create File
 on:
   push:              # Runs every time you push
     branches:
-      - master         # You can change this branch if needed
+      - main         # You can change this branch if needed
 
 jobs:
   create-file:
